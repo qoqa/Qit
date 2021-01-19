@@ -7,7 +7,7 @@
 //
 import UIKit
 
-public class ContainerCollectionViewCell<V: UIView>: UICollectionViewCell {
+open class ContainerCollectionViewCell<V: UIView>: UICollectionViewCell {
     
     public lazy var view: V = {
         return V()

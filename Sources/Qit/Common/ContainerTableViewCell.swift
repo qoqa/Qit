@@ -7,7 +7,7 @@
 //
 import UIKit
 
-public class ContainerTableViewCell<V: UIView>: UITableViewCell {
+open class ContainerTableViewCell<V: UIView>: UITableViewCell {
     
     public lazy var view: V = {
         return V()
