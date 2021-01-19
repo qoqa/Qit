@@ -13,7 +13,7 @@ public class ContainerCollectionViewCell<V: UIView>: UICollectionViewCell {
         return V()
     }()
     
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
         super.init(frame: frame)
         view.translatesAutoresizingMaskIntoConstraints = false
         contentView.addSubview(view)
@@ -21,7 +21,7 @@ public class ContainerCollectionViewCell<V: UIView>: UICollectionViewCell {
         viewAttached()
     }
     
-    required init?(coder: NSCoder) {
+    public required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
@@ -29,5 +29,5 @@ public class ContainerCollectionViewCell<V: UIView>: UICollectionViewCell {
      Called when the custom view is attached and pinned
      
      */
-    func viewAttached() {}
+    public func viewAttached() {}
 }
