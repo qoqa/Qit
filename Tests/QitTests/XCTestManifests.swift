@@ -4,6 +4,7 @@ import XCTest
 public func allTests() -> [XCTestCaseEntry] {
     return [
         testCase(QitTests.allTests),
+        testCase(UIButtonAllStatesTests.allTests)
     ]
 }
 #endif
