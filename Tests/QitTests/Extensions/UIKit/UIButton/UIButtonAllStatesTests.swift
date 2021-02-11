@@ -48,7 +48,7 @@ final class UIButtonAllStatesTests: XCTestCase {
     }
 
     func testButtonImageForAllStates() {
-        UIGraphicsBeginImageContextWithOptions(CGRect(x: 0, y: 0, width: 0, height: 0).size, false, 0.0)
+        UIGraphicsBeginImageContextWithOptions(CGRect(x: 0, y: 0, width: 1, height: 1).size, false, 0.0)
 
         let imageContext = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
