@@ -22,4 +22,4 @@ From Xcode 11, you can use [Swift Package Manager](https://swift.org/package-man
 
 ## License
 
-Qit is available under the ![MIT license](LICENSE).
+Qit is available under the [MIT license](LICENSE).
