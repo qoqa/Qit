@@ -1,0 +1,22 @@
+on:
+  push:
+    tags:
+    - 'v*' # Push events to matching v*, i.e. v1.0, v20.15.10
+
+name: Slack New Release
+jobs:
+  slackNotification:
+    name: Slack Notification
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Slack Notification
+      uses: rtCamp/action-slack-notify@v2
+      env:
+        SLACK_CHANNEL: dev_app_ios
+        SLACK_COLOR: '#55BD32'
+        SLACK_ICON: https://raw.githubusercontent.com/qoqa/Qit/master/qit.png&size=48
+        SLACK_MESSAGE: 'New release available https://github.com/qoqa/qaraq_ios/releases :rocket:'
+        SLACK_TITLE: Qit
+        SLACK_USERNAME: Qit
+        SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
