@@ -8,24 +8,31 @@ import UIKit
 
 extension UIButton {
 
+    private var states: [UIControl.State] {
+        return [.normal, .selected, .highlighted, .disabled]
+    }
+
+    /// Set title for all states
+    /// - Parameter title: Optional String
     public func setTitleForAllStates(_ title: String?) {
-        let states: [UIControl.State] = [.normal, .highlighted, .selected, .disabled]
-        for state in states {
-            self.setTitle(title, for: state)
+        states.forEach {
+            self.setTitle(title, for: $0)
         }
     }
 
+    /// Set title color for all states
+    /// - Parameter color: UIColor
     public func setTitleColorForAllStates(_ color: UIColor) {
-        let states: [UIControl.State] = [.normal, .highlighted, .selected, .disabled]
-        for state in states {
-            self.setTitleColor(color, for: state)
+        states.forEach {
+            self.setTitleColor(color, for: $0)
         }
     }
 
+    /// Set image for all states
+    /// - Parameter color: UIImage
     public func setImageForAllStates(_ image: UIImage) {
-        let states: [UIControl.State] = [.normal, .highlighted, .selected, .disabled]
-        for state in states {
-            self.setImage(image, for: state)
+        states.forEach {
+            self.setImage(image, for: $0)
         }
     }
 }
