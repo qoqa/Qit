@@ -20,8 +20,8 @@ extension UIView {
         let leftConstraint = leftAnchor.constraint(equalTo: superview.leftAnchor, constant: margin.left)
         let rightConstraint = rightAnchor.constraint(equalTo: superview.rightAnchor, constant: -margin.right)
         let topConstraint = topAnchor.constraint(equalTo: superview.topAnchor, constant: margin.top)
-        let bottomConstraint = bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: margin.bottom)
-        NSLayoutConstraint.activate([leftConstraint, rightConstraint, topConstraint, -bottomConstraint])
+        let bottomConstraint = bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -margin.bottom)
+        NSLayoutConstraint.activate([leftConstraint, rightConstraint, topConstraint, bottomConstraint])
     }
 
     /**
