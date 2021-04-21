@@ -13,14 +13,14 @@ extension UIView {
      Pin the view to all the edges of the superview with margins (Optional)
      
      - Parameters:
-        - margins: margins (you don't have to use negative margins for right and bottom(see below))
+        - margins(optional): margins (you don't have to use negative margins for right and bottom(see below))
     */
     func pinToSuperViewEdges(margins: UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)) {
         guard let superview = superview else { return }
-        let leftConstraint = leftAnchor.constraint(equalTo: superview.leftAnchor, constant: margin.left)
-        let rightConstraint = rightAnchor.constraint(equalTo: superview.rightAnchor, constant: -margin.right)
-        let topConstraint = topAnchor.constraint(equalTo: superview.topAnchor, constant: margin.top)
-        let bottomConstraint = bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -margin.bottom)
+        let leftConstraint = leftAnchor.constraint(equalTo: superview.leftAnchor, constant: margins.left)
+        let rightConstraint = rightAnchor.constraint(equalTo: superview.rightAnchor, constant: -margins.right)
+        let topConstraint = topAnchor.constraint(equalTo: superview.topAnchor, constant: margins.top)
+        let bottomConstraint = bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -margins.bottom)
         NSLayoutConstraint.activate([leftConstraint, rightConstraint, topConstraint, bottomConstraint])
     }
 
@@ -28,7 +28,7 @@ extension UIView {
      Pin to the right side of the superview
      
      - Parameters:
-        - margin: margin right (you don't have to use negative margins(see below))
+        - margin(optional): margin right (you don't have to use negative margins(see below))
     */
     public func pinRightToSuperview(margin: CGFloat = 0.0) {
         guard let superview = superview else { return }
@@ -39,7 +39,7 @@ extension UIView {
      Pin to the left side of the superview
 
      - Parameters:
-        - margin: margin left
+        - margin(optional): margin left
     */
     public func pinLeftToSuperview(margin: CGFloat = 0.0) {
         guard let superview = superview else { return }
@@ -50,7 +50,7 @@ extension UIView {
      Pin to the top of the superview
 
      - Parameters:
-        - margin: margin top
+        - margin(optional): margin top
     */
     public func pinTopToSuperview(margin: CGFloat = 0.0) {
         guard let superview = superview else { return }
