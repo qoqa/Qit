@@ -15,7 +15,7 @@ extension UIView {
      - Parameters:
         - margins: margins (you don't have to use negative margins for right and bottom(see below))
     */
-    public func pinToSuperViewEdges(margins: UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)) {
+    public func pinToSuperviewEdges(margins: UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)) {
         guard let superview = superview else { return }
         let leftConstraint = leftAnchor.constraint(equalTo: superview.leftAnchor, constant: margins.left)
         let rightConstraint = rightAnchor.constraint(equalTo: superview.rightAnchor, constant: -margins.right)
