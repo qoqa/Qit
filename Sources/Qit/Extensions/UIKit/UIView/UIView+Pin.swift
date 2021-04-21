@@ -13,15 +13,15 @@ extension UIView {
      Pin the view to all the edges of the superview with margins (Optional)
      
      - Parameters:
-        - margins: margins
+        - margins: margins (you don't have to use negative margins for right and bottom(see below))
     */
     func pinToSuperViewEdges(margins: UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)) {
         guard let superview = superview else { return }
         let leftConstraint = leftAnchor.constraint(equalTo: superview.leftAnchor, constant: margin.left)
-        let rightConstraint = rightAnchor.constraint(equalTo: superview.rightAnchor, constant: margin.right)
+        let rightConstraint = rightAnchor.constraint(equalTo: superview.rightAnchor, constant: -margin.right)
         let topConstraint = topAnchor.constraint(equalTo: superview.topAnchor, constant: margin.top)
         let bottomConstraint = bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: margin.bottom)
-        NSLayoutConstraint.activate([leftConstraint, rightConstraint, topConstraint, bottomConstraint])
+        NSLayoutConstraint.activate([leftConstraint, rightConstraint, topConstraint, -bottomConstraint])
     }
 
     /**
