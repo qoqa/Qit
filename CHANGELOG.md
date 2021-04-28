@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.4] - 2021-04-28
+
+### Updated
+- Update `UIButton+AllState.swift` by adding the possibility to reset images for all states
+
 ## [0.0.3] - 2021-04-21
 
 ### Added

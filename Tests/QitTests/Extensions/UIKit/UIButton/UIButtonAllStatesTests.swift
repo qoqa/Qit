@@ -72,6 +72,13 @@ final class UIButtonAllStatesTests: XCTestCase {
 
         button.isSelected = true
         XCTAssertEqual(button.image(for: .selected), image)
+
+        // Remove image
+        button.setImageForAllStates(nil)
+        XCTAssertNil(button.image(for: .normal))
+        XCTAssertNil(button.image(for: .disabled))
+        XCTAssertNil(button.image(for: .highlighted))
+        XCTAssertNil(button.image(for: .selected))
     }
 
     static var allTests = [
