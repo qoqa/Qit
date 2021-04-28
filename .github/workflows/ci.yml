@@ -18,10 +18,4 @@ jobs:
       run: sudo xcode-select --switch /Applications/Xcode_12.4.app
    
     - name: Run tests
-      run: xcodebuild -derivedDataPath DerivedData test -destination 'name=iPhone 11 Pro' -scheme 'Qit' | /usr/local/bin/xcpretty --report junit
-
-    - name: Publish Unit Test Results
-      uses: EnricoMi/publish-unit-test-result-action/composite@v1
-      if: always()
-      with:
-        files: build/reports/junit.xml
+      run: xcodebuild test -destination 'name=iPhone 11 Pro' -scheme 'Qit'
