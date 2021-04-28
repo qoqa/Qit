@@ -30,7 +30,7 @@ extension UIButton {
 
     /// Set image for all states
     /// - Parameter color: UIImage
-    public func setImageForAllStates(_ image: UIImage) {
+    public func setImageForAllStates(_ image: UIImage?) {
         states.forEach {
             self.setImage(image, for: $0)
         }
