@@ -19,3 +19,9 @@ jobs:
    
     - name: Run tests
       run: xcodebuild test -destination 'name=iPhone 11 Pro' -scheme 'Qit'
+
+    - name: Publish Unit Test Results
+      uses: EnricoMi/publish-unit-test-result-action/composite@v1
+      if: always()
+      with:
+        files: test-results/**/*.xml
