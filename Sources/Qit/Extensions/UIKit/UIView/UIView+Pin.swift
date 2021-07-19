@@ -27,21 +27,21 @@ extension UIView {
     /// - Note: No need to use a negative margin value
     public func pinRightToSuperview(margin: CGFloat = 0.0) {
         guard let superview = superview else { return }
-        rightAnchor.constraint(equalTo: superview.rightAnchor, constant: -margin).isActive = true
+        pinRightToView(superview, margin: margin)
     }
 
     /// Pin to the left side of the superview
     /// - Parameter margin: Margin left. Default is zero
     public func pinLeftToSuperview(margin: CGFloat = 0.0) {
         guard let superview = superview else { return }
-        leftAnchor.constraint(equalTo: superview.leftAnchor, constant: margin).isActive = true
+        pinLeftToView(superview, margin: margin)
     }
 
     /// Pin to the top of the superview
     /// - Parameter margin: Margin top. Default is zero
     public func pinTopToSuperview(margin: CGFloat = 0.0) {
         guard let superview = superview else { return }
-        topAnchor.constraint(equalTo: superview.topAnchor, constant: margin).isActive = true
+        pinTopToView(superview, margin: margin)
     }
 
     /// Pin to the bottom of the superview
@@ -49,6 +49,30 @@ extension UIView {
     /// - Note: No need to use a negative margin value
     public func pinBottomToSuperview(margin: CGFloat = 0.0) {
         guard let superview = superview else { return }
-        bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -margin).isActive = true
+        pinBottomToView(superview, margin: margin)
+    }
+
+    /// Pin to the right side of the view
+    /// - Parameter margin: Margin left. Default is zero
+    public func pinRightToView(_ view, margin: CGFloat = 0.0) {
+        rightAnchor.constraint(equalTo: view.rightAnchor, constant: -margin).isActive = true
+    }
+
+    /// Pin to the left side of the view
+    /// - Parameter margin: Margin left. Default is zero
+    public func pinLeftToView(_ view, margin: CGFloat = 0.0) {
+        leftAnchor.constraint(equalTo: view.leftAnchor, constant: margin).isActive = true
+    }
+
+    /// Pin to the top side of the view
+    /// - Parameter margin: Margin left. Default is zero
+    public func pinTopToView(_ view, margin: CGFloat = 0.0) {
+        topAnchor.constraint(equalTo: view.topAnchor, constant: margin).isActive = true
+    }
+
+    /// Pin to the bottom side of the view
+    /// - Parameter margin: Margin left. Default is zero
+    public func pinBottomToView(_ view, margin: CGFloat = 0.0) {
+        bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -margin).isActive = true
     }
 }
