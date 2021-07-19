@@ -25,30 +25,74 @@ extension UIView {
     /// Pin to the right side of the superview
     /// - Parameter margin: Margin right. Default is zero
     /// - Note: No need to use a negative margin value
-    public func pinRightToSuperview(margin: CGFloat = 0.0) {
-        guard let superview = superview else { return }
-        rightAnchor.constraint(equalTo: superview.rightAnchor, constant: -margin).isActive = true
+    /// - Returns: The created constraint
+    @discardableResult public func pinRightToSuperview(margin: CGFloat = 0.0) -> NSLayoutConstraint? {
+        guard let superview = superview else { return nil }
+        return pinRightToView(superview, margin: margin)
     }
 
     /// Pin to the left side of the superview
     /// - Parameter margin: Margin left. Default is zero
-    public func pinLeftToSuperview(margin: CGFloat = 0.0) {
-        guard let superview = superview else { return }
-        leftAnchor.constraint(equalTo: superview.leftAnchor, constant: margin).isActive = true
+    /// - Returns: The created constraint
+    @discardableResult public func pinLeftToSuperview(margin: CGFloat = 0.0) -> NSLayoutConstraint? {
+        guard let superview = superview else { return nil }
+        return pinLeftToView(superview, margin: margin)
     }
 
     /// Pin to the top of the superview
     /// - Parameter margin: Margin top. Default is zero
-    public func pinTopToSuperview(margin: CGFloat = 0.0) {
-        guard let superview = superview else { return }
-        topAnchor.constraint(equalTo: superview.topAnchor, constant: margin).isActive = true
+    /// - Returns: The created constraint
+    @discardableResult public func pinTopToSuperview(margin: CGFloat = 0.0) -> NSLayoutConstraint? {
+        guard let superview = superview else { return nil }
+        return pinTopToView(superview, margin: margin)
     }
 
     /// Pin to the bottom of the superview
     /// - Parameter margin: Margin bottom. Default is zero
     /// - Note: No need to use a negative margin value
-    public func pinBottomToSuperview(margin: CGFloat = 0.0) {
-        guard let superview = superview else { return }
-        bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -margin).isActive = true
+    /// - Returns: The created constraint
+    @discardableResult public func pinBottomToSuperview(margin: CGFloat = 0.0) -> NSLayoutConstraint? {
+        guard let superview = superview else { return nil }
+        return pinBottomToView(superview, margin: margin)
+    }
+
+    /// Pin to the right side of the view
+    /// - Parameter margin: Margin left. Default is zero
+    /// - Parameter view: UIView that will be constrained with
+    /// - Returns: The created constraint
+    @discardableResult public func pinRightToView(_ view: UIView, margin: CGFloat = 0.0) -> NSLayoutConstraint {
+        let constraint = rightAnchor.constraint(equalTo: view.rightAnchor, constant: -margin)
+        constraint.isActive = true
+        return constraint
+    }
+
+    /// Pin to the left side of the view
+    /// - Parameter margin: Margin left. Default is zero
+    /// - Parameter view: UIView that will be constrained with
+    /// - Returns: The created constraint
+    @discardableResult public func pinLeftToView(_ view: UIView, margin: CGFloat = 0.0) -> NSLayoutConstraint {
+        let constraint = leftAnchor.constraint(equalTo: view.leftAnchor, constant: margin)
+        constraint.isActive = true
+        return constraint
+    }
+
+    /// Pin to the top side of the view
+    /// - Parameter margin: Margin left. Default is zero
+    /// - Parameter view: UIView that will be constrained with
+    /// - Returns: The created constraint
+    @discardableResult func pinTopToView(_ view: UIView, margin: CGFloat = 0.0) -> NSLayoutConstraint {
+        let constraint = topAnchor.constraint(equalTo: view.topAnchor, constant: margin)
+        constraint.isActive = true
+        return constraint
+    }
+
+    /// Pin to the bottom side of the view
+    /// - Parameter margin: Margin left. Default is zero
+    /// - Parameter view: UIView that will be constrained with
+    /// - Returns: The created constraint
+    @discardableResult public func pinBottomToView(_ view: UIView, margin: CGFloat = 0.0) -> NSLayoutConstraint {
+        let constraint = bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -margin)
+        constraint.isActive = true
+        return constraint
     }
 }
