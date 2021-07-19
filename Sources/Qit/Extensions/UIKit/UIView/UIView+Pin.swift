@@ -54,24 +54,28 @@ extension UIView {
 
     /// Pin to the right side of the view
     /// - Parameter margin: Margin left. Default is zero
+    /// - Parameter view: UIView that will be constrained with
     public func pinRightToView(_ view, margin: CGFloat = 0.0) {
         rightAnchor.constraint(equalTo: view.rightAnchor, constant: -margin).isActive = true
     }
 
     /// Pin to the left side of the view
     /// - Parameter margin: Margin left. Default is zero
+    /// - Parameter view: UIView that will be constrained with
     public func pinLeftToView(_ view, margin: CGFloat = 0.0) {
         leftAnchor.constraint(equalTo: view.leftAnchor, constant: margin).isActive = true
     }
 
     /// Pin to the top side of the view
     /// - Parameter margin: Margin left. Default is zero
+    /// - Parameter view: UIView that will be constrained with
     public func pinTopToView(_ view, margin: CGFloat = 0.0) {
         topAnchor.constraint(equalTo: view.topAnchor, constant: margin).isActive = true
     }
 
     /// Pin to the bottom side of the view
     /// - Parameter margin: Margin left. Default is zero
+    /// - Parameter view: UIView that will be constrained with
     public func pinBottomToView(_ view, margin: CGFloat = 0.0) {
         bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -margin).isActive = true
     }
