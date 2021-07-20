@@ -43,7 +43,7 @@ final class UIViewPinTests: XCTestCase {
         }
     }
 
-    func test_pinToSuperviewEdges_withMargin() {
+    func test_pinToSuperviewEdges_withMargins() {
         XCTAssertEqual(aView.frame, aFrame)
         XCTAssertEqual(bView.frame, .zero)
 
@@ -253,4 +253,25 @@ final class UIViewPinTests: XCTestCase {
 
         XCTAssertEqual(constraint.constant, -8)
     }
+
+    static var allTests = [
+        ("test_pinToSuperviewEdges", test_pinToSuperviewEdges),
+        ("test_pinToSuperviewEdges_withMargins", test_pinToSuperviewEdges_withMargins),
+        ("test_pinRightToSuperview", test_pinRightToSuperview),
+        ("test_pinRightToSuperview_withMargin", test_pinRightToSuperview_withMargin),
+        ("test_pinLeftToSuperview", test_pinLeftToSuperview),
+        ("test_pinLeftToSuperview_withMargin", test_pinLeftToSuperview_withMargin),
+        ("test_pinLeftToSuperview", test_pinLeftToSuperview),
+        ("test_pinLeftToSuperview_withMargin", test_pinLeftToSuperview_withMargin),
+        ("test_pinTopToSuperview", test_pinTopToSuperview),
+        ("test_pinTopToSuperview_withMargin", test_pinTopToSuperview_withMargin),
+        ("test_pinRightToView", test_pinRightToView),
+        ("test_pinRightToView_withMargin", test_pinRightToView_withMargin),
+        ("test_pinLeftToView", test_pinLeftToView),
+        ("test_pinLeftToView_withMargin", test_pinLeftToView_withMargin),
+        ("test_pinTopToView", test_pinTopToView),
+        ("test_pinTopToView_withMargin", test_pinTopToView_withMargin),
+        ("test_pinBottomToView", test_pinBottomToView),
+        ("test_pinBottomToView_withMargin", test_pinBottomToView_withMargin)
+    ]
 }
