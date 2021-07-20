@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.6] - 2021-07-20
+
+- Add tests to `UIView+Pin.swift`
+
 ## [0.0.5] - 2021-07-19
 
 ### Added
