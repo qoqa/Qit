@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.7] - 2021-09-09
+
+- Add `UIStackView+Subviews.swift` extension with a function to remove all arranged subviews
+
 ## [0.0.6] - 2021-07-20
 
 - Add tests to `UIView+Pin.swift`

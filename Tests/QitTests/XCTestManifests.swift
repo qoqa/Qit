@@ -5,7 +5,8 @@ public func allTests() -> [XCTestCaseEntry] {
     return [
         testCase(QitTests.allTests),
         testCase(UIButtonAllStatesTests.allTests),
-        testCase(UIViewPinTests.allTests)
+        testCase(UIViewPinTests.allTests),
+        testCase(UIStackViewSubviewsTests.allTests)
     ]
 }
 #endif
