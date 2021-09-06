@@ -4,12 +4,13 @@
 //
 //  Created by Alexandre on 10.02.21.
 //
+
 import XCTest
 @testable import Qit
 
 final class UIButtonAllStatesTests: XCTestCase {
 
-    func testButtonTitleColorForAllStates() {
+    func test_buttonTitleColor_forAllStates() {
         let titleColor = UIColor.red
 
         let button = UIButton(frame: .zero)
@@ -28,7 +29,7 @@ final class UIButtonAllStatesTests: XCTestCase {
         XCTAssertEqual(button.currentTitleColor, titleColor)
     }
 
-    func testButtonTitleForAllStates() {
+    func test_buttonTitle_forAllStates() {
         let title = "Test"
 
         let button = UIButton(frame: .zero)
@@ -47,7 +48,7 @@ final class UIButtonAllStatesTests: XCTestCase {
         XCTAssertEqual(button.currentTitle, title)
     }
 
-    func testButtonImageForAllStates() {
+    func test_buttonImage_forAllStates() {
         UIGraphicsBeginImageContextWithOptions(CGRect(x: 0, y: 0, width: 1, height: 1).size, false, 0.0)
 
         let imageContext = UIGraphicsGetImageFromCurrentImageContext()
@@ -82,8 +83,8 @@ final class UIButtonAllStatesTests: XCTestCase {
     }
 
     static var allTests = [
-        ("testButtonTitleColorForAllStates", testButtonTitleColorForAllStates),
-        ("testButtonTitleForAllStates", testButtonTitleForAllStates),
-        ("testButtonImageForAllStates", testButtonImageForAllStates)
+        ("test_buttonTitleColor_forAllStates", test_buttonTitleColor_forAllStates),
+        ("test_buttonTitle_forAllStates", test_buttonTitle_forAllStates),
+        ("test_buttonImage_forAllStates", test_buttonImage_forAllStates)
     ]
 }
