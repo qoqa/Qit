@@ -10,7 +10,7 @@ import UIKit
 extension UIStackView {
 
     /// Remove all the arranged subviews on a `UIStackView`
-    func removeAllArrangedSubviews() {
+    public func removeAllArrangedSubviews() {
         self.arrangedSubviews.forEach {
             self.removeArrangedSubview($0)
             NSLayoutConstraint.deactivate($0.constraints)
