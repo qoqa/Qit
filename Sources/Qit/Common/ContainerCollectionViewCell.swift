@@ -29,5 +29,5 @@ open class ContainerCollectionViewCell<V: UIView>: UICollectionViewCell {
      Called when the custom view is attached and pinned
      
      */
-    public func viewAttached() {}
+    open func viewAttached() {}
 }
