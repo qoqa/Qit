@@ -9,18 +9,22 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [0.0.9] - 2021-09-09
 
-- Add  `removeArrangedSubviews(_ views: [UIView])` on  `UIStackView+Subviews.swift`
+### Added
+- Add `removeArrangedSubviews(_ views: [UIView])` on `UIStackView+Subviews.swift`
 
 ## [0.0.8] - 2021-09-08
 
+### Updated
 - Update `ContainerCollectionViewCell`'s viewAttached from public to open to enable override in modules 
 
 ## [0.0.7] - 2021-09-02
 
+### Added
 - Add `UIStackView+Subviews.swift` extension with a function to remove all arranged subviews
 
 ## [0.0.6] - 2021-07-20
 
+### Added
 - Add tests to `UIView+Pin.swift`
 
 ## [0.0.5] - 2021-07-19
