@@ -23,7 +23,7 @@ final class UIStackViewSubviewsTests: XCTestCase {
         stackView.removeAllArrangedSubviews()
         XCTAssertEqual(stackView.arrangedSubviews.count, 0)
     }
-    
+
     func test_stackView_removeArrangedSubviews() {
         let stackView = UIStackView()
 
@@ -31,7 +31,7 @@ final class UIStackViewSubviewsTests: XCTestCase {
             let label = UILabel()
             stackView.addArrangedSubview(label)
         }
-        
+
         for _ in 0..<7 {
             let button = UIButton()
             stackView.addArrangedSubview(button)
