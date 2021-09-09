@@ -1,3 +1,5 @@
+name: Codecov
+
 jobs:
   codecov:
     container:
