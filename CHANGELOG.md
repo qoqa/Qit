@@ -7,6 +7,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.9] - 2021-09-09
+
+- Add  `removeArrangedSubviews(_ views: [UIView])` on  `UIStackView+Subviews.swift`
+
 ## [0.0.8] - 2021-09-08
 
 - Update `ContainerCollectionViewCell`'s viewAttached from public to open to enable override in modules 
