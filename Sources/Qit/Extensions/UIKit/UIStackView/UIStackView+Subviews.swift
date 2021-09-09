@@ -13,7 +13,7 @@ extension UIStackView {
     func removeAllArrangedSubviews() {
         removeArrangedSubviews(arrangedSubviews)
     }
-    
+
     /// Remove a subset of arranged subviews on a `UIStackView`
     func removeArrangedSubviews(_ views: [UIView]) {
         views.forEach {
