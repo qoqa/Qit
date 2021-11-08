@@ -15,6 +15,7 @@ extension UIView {
     @discardableResult public func pinToSuperviewEdges(
         margins: UIEdgeInsets = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)) -> [NSLayoutConstraint] {
         guard let superview = superview else { return [NSLayoutConstraint]() }
+        self.translatesAutoresizingMaskIntoConstraints = false
         let topConstraint = topAnchor.constraint(equalTo: superview.topAnchor, constant: margins.top)
         let leftConstraint = leftAnchor.constraint(equalTo: superview.leftAnchor, constant: margins.left)
         let bottomConstraint = bottomAnchor.constraint(equalTo: superview.bottomAnchor, constant: -margins.bottom)
@@ -62,6 +63,7 @@ extension UIView {
     /// - Parameter view: UIView that will be constrained with
     /// - Returns: The created constraint
     @discardableResult public func pinRightToView(_ view: UIView, margin: CGFloat = 0.0) -> NSLayoutConstraint {
+        self.translatesAutoresizingMaskIntoConstraints = false
         let constraint = rightAnchor.constraint(equalTo: view.rightAnchor, constant: -margin)
         constraint.isActive = true
         return constraint
@@ -72,6 +74,7 @@ extension UIView {
     /// - Parameter view: UIView that will be constrained with
     /// - Returns: The created constraint
     @discardableResult public func pinLeftToView(_ view: UIView, margin: CGFloat = 0.0) -> NSLayoutConstraint {
+        self.translatesAutoresizingMaskIntoConstraints = false
         let constraint = leftAnchor.constraint(equalTo: view.leftAnchor, constant: margin)
         constraint.isActive = true
         return constraint
@@ -82,6 +85,7 @@ extension UIView {
     /// - Parameter view: UIView that will be constrained with
     /// - Returns: The created constraint
     @discardableResult public func pinTopToView(_ view: UIView, margin: CGFloat = 0.0) -> NSLayoutConstraint {
+        self.translatesAutoresizingMaskIntoConstraints = false
         let constraint = topAnchor.constraint(equalTo: view.topAnchor, constant: margin)
         constraint.isActive = true
         return constraint
@@ -92,6 +96,7 @@ extension UIView {
     /// - Parameter view: UIView that will be constrained with
     /// - Returns: The created constraint
     @discardableResult public func pinBottomToView(_ view: UIView, margin: CGFloat = 0.0) -> NSLayoutConstraint {
+        self.translatesAutoresizingMaskIntoConstraints = false
         let constraint = bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -margin)
         constraint.isActive = true
         return constraint

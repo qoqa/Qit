@@ -23,7 +23,6 @@ final class UIViewPinTests: XCTestCase {
 
     lazy var bView: UIView = {
         let view = UIView(frame: .zero)
-        view.translatesAutoresizingMaskIntoConstraints = false
         return view
     }()
 

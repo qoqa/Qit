@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.10] - 2021-11-08
+
+### Updated
+- Update `UIView+Pin.swift` to force auto layout using `translatesAutoresizingMaskIntoConstraints`
+
 ## [0.0.9] - 2021-09-09
 
 ### Added
