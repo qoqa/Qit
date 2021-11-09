@@ -28,4 +28,3 @@ final class NotificationCenterUtilsTests: XCTestCase {
         selectorTriggered = true
     }
 }
-
