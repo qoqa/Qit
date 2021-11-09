@@ -43,4 +43,9 @@ final class UIStackViewSubviewsTests: XCTestCase {
         stackView.removeArrangedSubviews(labelSubViews)
         XCTAssertEqual(stackView.arrangedSubviews.count, 7)
     }
+
+    static var allTests = [
+        ("test_stackView_removeAllArrangedSubviews", test_stackView_removeAllArrangedSubviews),
+        ("test_stackView_removeArrangedSubviews", test_stackView_removeArrangedSubviews)
+    ]
 }
