@@ -24,7 +24,12 @@ final class NotificationCenterUtilsTests: XCTestCase {
         NotificationCenter.default.post(name: notificationName)
         XCTAssertFalse(selectorTriggered)
     }
+
     @objc private func testSelector() {
         selectorTriggered = true
     }
+
+    static var allTests = [
+        ("test_postNotification", test_postNotification)
+    ]
 }
