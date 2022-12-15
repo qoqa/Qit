@@ -1,0 +1,31 @@
+//
+//  View+ConditionalModifier.swift
+//  Qit
+//
+//  Created by Alexandre Nussbaumer on 09.06.22.
+//  Copyright © 2022 QoQa Services SA. All rights reserved.
+//
+
+import SwiftUI
+
+extension View {
+
+    typealias ContentTransform<Content: View> = (Self) -> Content
+
+    /// Conditional `SwiftUI` view modifier
+    /// - Parameters:
+    ///   - condition: VIew modifier condition
+    ///   - then: Content transform for the `true` condtion
+    ///   - else: Content transform for the `false` condtion
+    /// - Returns: Content
+    @ViewBuilder func `if`<TrueContent: View, FalseContent: View>(
+        _ condition: Bool,
+        then: ContentTransform<TrueContent>,
+        else: ContentTransform<FalseContent>) -> some View {
+            if condition {
+                then(self)
+            } else {
+                `else`(self)
+            }
+        }
+}
