@@ -15,7 +15,7 @@ extension View {
     /// Conditional `SwiftUI` view modifier
     /// - Parameters:
     ///   - condition: View modifier condition
-    ///   - then: Content transform for the `true` condtion
+    ///   - then: Content transform for the `true` condition
     ///   - else: Content transform for the `false` condtion
     /// - Returns: Content
     @ViewBuilder func `if`<TrueContent: View, FalseContent: View>(
