@@ -8,9 +8,10 @@
 
 import SwiftUI
 
+@available(iOS 13.0, *)
 extension View {
 
-    typealias ContentTransform<Content: View> = (Self) -> Content
+    public typealias ContentTransform<Content: View> = (Self) -> Content
 
     /// Conditional `SwiftUI` view modifier
     /// - Parameters:
@@ -18,7 +19,7 @@ extension View {
     ///   - then: Content transform for the `true` condition
     ///   - else: Content transform for the `false` condtion
     /// - Returns: Content
-    @ViewBuilder func `if`<TrueContent: View, FalseContent: View>(
+    @ViewBuilder public func `if`<TrueContent: View, FalseContent: View>(
         _ condition: Bool,
         then: ContentTransform<TrueContent>,
         else: ContentTransform<FalseContent>) -> some View {

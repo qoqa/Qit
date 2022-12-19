@@ -14,7 +14,7 @@ jobs:
     steps:
     - uses: actions/checkout@v2
   
-    - name: Switch to Xcode
+    - name: Switch to Xcode 13.2.1
       run: sudo xcode-select --switch /Applications/Xcode.app
    
     - name: Run tests
