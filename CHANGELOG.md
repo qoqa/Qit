@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.12] - 2022-12-15
+
+### Added
+- Add `View+ConditionalModifier.swift` extension with condition to apply the modifier to the view
+
 ## [0.0.11] - 2021-11-09
 
 ### Added

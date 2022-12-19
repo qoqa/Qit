@@ -14,8 +14,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
   
-    - name: Switch to Xcode 12
-      run: sudo xcode-select --switch /Applications/Xcode_12.4.app
+    - name: Switch to Xcode 13.2.1
+      run: sudo xcode-select --switch /Applications/Xcode.app
    
     - name: Run tests
-      run: xcodebuild test -destination 'name=iPhone 11 Pro' -scheme 'Qit'
+      run: xcodebuild test -destination 'name=iPhone 13 Pro' -scheme 'Qit'
