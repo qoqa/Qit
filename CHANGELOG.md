@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.13] - 2023-01-09
+
+### Added
+- Add `UIApplication+Window.swift` to get the first `window` and `rootViewController` from the `connectedScenes`
+
 ## [0.0.12] - 2022-12-15
 
 ### Added
