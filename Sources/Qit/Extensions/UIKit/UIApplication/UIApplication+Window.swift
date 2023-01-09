@@ -12,7 +12,7 @@ import UIKit
 extension UIApplication {
 
     /// Returns the first available window
-    var window: UIWindow? {
+    public var window: UIWindow? {
         return self
             .connectedScenes
             .compactMap { $0 as? UIWindowScene }
@@ -21,7 +21,7 @@ extension UIApplication {
     }
 
     /// Returns the rootViewController or the presentedViewController if displayed
-    var rootViewController: UIViewController? {
+    public var rootViewController: UIViewController? {
         guard var viewController = window?.rootViewController else { return nil }
 
         // Get the top presentedController if exists
