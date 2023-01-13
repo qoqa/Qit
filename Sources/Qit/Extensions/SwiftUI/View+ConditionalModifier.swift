@@ -6,10 +6,8 @@
 //  Copyright © 2022 QoQa Services SA. All rights reserved.
 //
 
-#if canImport(SwiftUI)
 import SwiftUI
 
-@available(iOS 13.0, *)
 extension View {
 
     public typealias ContentTransform<Content: View> = (Self) -> Content
@@ -31,4 +29,3 @@ extension View {
             }
         }
 }
-#endif
