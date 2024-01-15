@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.0.16] - 2023
+
+### Fixed
+- Fix warnings in `NotificationCenter+Utils`
+
 ## [0.0.15] - 2023-01-13
 
 ### Added

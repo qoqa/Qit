@@ -18,7 +18,7 @@ extension NotificationCenter {
     ///   - name: The name of the notification to register for delivery to the observer.
     ///   Specify a notification name to deliver only entries with this notification name.
     ///   When nil, the sender doesn’t use notification names as criteria for the delivery.
-    open func addObserver(_ observer: Any, selector: Selector, name: NSNotification.Name?) {
+    public func addObserver(_ observer: Any, selector: Selector, name: NSNotification.Name?) {
         addObserver(observer, selector: selector, name: name, object: nil)
     }
 
@@ -26,7 +26,7 @@ extension NotificationCenter {
     /// - Parameters:
     ///   - name: The name of the notification.
     ///   - userInfo: Optional information about the the notification.
-    open func post(name: NSNotification.Name, userInfo: [AnyHashable: Any]? = nil) {
+    public func post(name: NSNotification.Name, userInfo: [AnyHashable: Any]? = nil) {
         post(name: name, object: nil, userInfo: userInfo)
     }
 
@@ -37,7 +37,7 @@ extension NotificationCenter {
     ///   - name: The name of the notification to remove from the dispatch table.
     ///   Specify a notification name to remove only entries with this notification name.
     ///   When nil, the receiver does not use notification names as criteria for removal.
-    open func removeObserver(_ observer: Any, name: NSNotification.Name?) {
+    public func removeObserver(_ observer: Any, name: NSNotification.Name?) {
         removeObserver(observer, name: name, object: nil)
     }
 }
