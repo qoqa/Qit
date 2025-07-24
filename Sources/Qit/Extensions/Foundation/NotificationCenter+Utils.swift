@@ -1,10 +1,3 @@
-//
-//  NotificationCenter+Utils.swift
-//  Qit
-//
-//  Created by Michel Pinto on 09.11.21.
-//
-
 import Foundation
 
 extension NotificationCenter {

@@ -1,11 +1,3 @@
-//
-//  View+ConditionalModifier.swift
-//  Qit
-//
-//  Created by Alexandre Nussbaumer on 09.06.22.
-//  Copyright © 2022 QoQa Services SA. All rights reserved.
-//
-
 import SwiftUI
 
 extension View {

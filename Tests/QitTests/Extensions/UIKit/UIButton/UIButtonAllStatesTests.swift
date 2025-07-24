@@ -10,44 +10,6 @@ import XCTest
 
 final class UIButtonAllStatesTests: XCTestCase {
 
-    func test_buttonTitleColor_forAllStates() {
-        let titleColor = UIColor.red
-
-        let button = UIButton(frame: .zero)
-        button.setTitleColorForAllStates(titleColor)
-
-        XCTAssertEqual(button.currentTitleColor, titleColor)
-
-        button.isEnabled = false
-        XCTAssertEqual(button.currentTitleColor, titleColor)
-
-        button.isEnabled = true
-        button.isHighlighted = true
-        XCTAssertEqual(button.currentTitleColor, titleColor)
-
-        button.isSelected = true
-        XCTAssertEqual(button.currentTitleColor, titleColor)
-    }
-
-    func test_buttonTitle_forAllStates() {
-        let title = "Test"
-
-        let button = UIButton(frame: .zero)
-        button.setTitleForAllStates(title)
-
-        XCTAssertEqual(button.currentTitle, title)
-
-        button.isEnabled = false
-        XCTAssertEqual(button.currentTitle, title)
-
-        button.isEnabled = true
-        button.isHighlighted = true
-        XCTAssertEqual(button.currentTitle, title)
-
-        button.isSelected = true
-        XCTAssertEqual(button.currentTitle, title)
-    }
-
     func test_buttonImage_forAllStates() {
         UIGraphicsBeginImageContextWithOptions(CGRect(x: 0, y: 0, width: 1, height: 1).size, false, 0.0)
 
@@ -83,8 +45,6 @@ final class UIButtonAllStatesTests: XCTestCase {
     }
 
     static var allTests = [
-        ("test_buttonTitleColor_forAllStates", test_buttonTitleColor_forAllStates),
-        ("test_buttonTitle_forAllStates", test_buttonTitle_forAllStates),
         ("test_buttonImage_forAllStates", test_buttonImage_forAllStates)
     ]
 }

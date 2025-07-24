@@ -1,14 +1,5 @@
-//
-//  UIApplication+Window.swift
-//  QoQa
-//
-//  Created by Sara Alemanno on 09.01.23.
-//  Copyright © 2021 QoQa Services SA. All rights reserved.
-//
-
 import UIKit
 
-@available(iOS 13, *)
 extension UIApplication {
 
     /// Returns the first available window
