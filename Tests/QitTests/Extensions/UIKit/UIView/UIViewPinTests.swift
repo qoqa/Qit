@@ -56,6 +56,6 @@ final class UIViewPinTests: XCTestCase {
 
     static var allTests = [
         ("test_pinToSuperviewEdges", test_pinToSuperviewEdges),
-        ("test_pinToSuperviewEdges_withMargins", test_pinToSuperviewEdges_withMargins),
+        ("test_pinToSuperviewEdges_withMargins", test_pinToSuperviewEdges_withMargins)
     ]
 }
